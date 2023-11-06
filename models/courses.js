@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+
+
+const courseShema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    price:{
+        type:Number,
+        required:true
+    }
+});
+
+module.exports = mongoose.model('courses',courseShema);
